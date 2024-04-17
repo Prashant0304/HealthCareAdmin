@@ -1,0 +1,6 @@
+Options -MultiViews
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)\.[\d]{10}\.(css|js)$ $1.$2 [L]
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
